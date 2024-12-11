@@ -1,0 +1,380 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.App {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+    .sidebar h2 {
+        margin-top: 0;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .sidebar li {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: #444;
+        color: white;
+    }
+
+        .sidebar li.active,
+        .sidebar li:hover {
+            background-color: #007bff;
+        }
+
+.content {
+    flex: 1;
+    min-width: 1200px;
+    background: white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+    .header h1 {
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+        margin: 0;
+    }
+
+.search-section {
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    max-width: 600px;
+}
+
+.search-button {
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .search-button:hover {
+        background-color: #0056b3;
+    }
+
+/* 비디오 리스트와 카드 스타일 */
+.video-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .video-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .video-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 120px;
+    height: 90px;
+    border-radius: 4px;
+  }
+  
+  .video-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #003f7d; /* 중간 파란색 */
+  }
+  
+  .video-details p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .video-url {
+    text-decoration: none;
+    color: #0056b3; /* 진한 파란색 */
+    font-weight: bold;
+  }
+  
+  .video-url:hover {
+    text-decoration: underline;
+    color: #003f7d; /* 중간 파란색 */
+  }
+  
+  .summary-button {
+    background-color: #007bff; /* 기본 파란색 */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .summary-button:hover {
+    background-color: #0056b3; /* 진한 파란색 */
+  }
+  
+  .video-summary {
+    background-color: #f1f8ff; /* 아주 연한 파란색 */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+.favorites-section {
+    padding: 20px;
+}
+
+.pdf-section {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.pdf-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+    .pdf-upload-label:hover {
+        background-color: #0056b3;
+    }
+
+.pdf-summary {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+    .pdf-summary h3 {
+        margin-top: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .pdf-summary p {
+        margin: 10px 0 0;
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+
+.filter-section {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+    .filter-section h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+    .filter-controls > div {
+        flex: 1 1 200px; /* 최소 너비 200px, 공간에 따라 유연하게 조정 */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-controls label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .filter-controls input,
+    .filter-controls select {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease;
+    }
+
+        .filter-controls input:focus,
+        .filter-controls select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+.filter-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .filter-buttons button {
+        padding: 12px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .filter-buttons button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+
+.favorites-list {
+    list-style: none;
+    padding: 0;
+}
+
+.favorites-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+    .favorites-item h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+    }
+
+    .favorites-item p {
+        margin: 0 0 5px;
+        font-size: 14px;
+        color: #555;
+    }
+
+.favorites-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .favorites-table th, .favorites-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .favorites-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+    .pagination button {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+        .pagination button[disabled] {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+
+.thumbnail {
+    width: 120px;
+    height: 90px;
+    border-radius: 4px;
+}

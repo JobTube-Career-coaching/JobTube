@@ -97,9 +97,6 @@ function App() {
         ncsCdLst: '전체보기',               // NCS코드목록
     });
 
-    useEffect(() => {
-        fetchFavorites();
-    }, []);
 
     const fetchFavorites = async () => {
         try {
@@ -118,7 +115,7 @@ function App() {
                 try {
                     const response = await axios.get('http://apis.data.go.kr/1051000/recruitment/list', {
                         params: {
-                            serviceKey: 'secret',
+                            serviceKey: "secret",
                             pbancBgngYmd: formattedDate,
                             numOfRows: pageSize, // 페이지당 결과 수
                         },
@@ -239,7 +236,7 @@ function App() {
     return (
         <div className="App">
             <div className="sidebar">
-                <h2>메뉴</h2>
+                <h2>MENU</h2>
                 <ul>
                     <li onClick={() => setActiveMenu('search')} className={activeMenu === 'search' ? 'active' : ''}>
                         YOUTUBE 요약

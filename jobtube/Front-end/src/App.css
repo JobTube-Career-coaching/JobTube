@@ -11,67 +11,93 @@ body {
     width: 100%;
     height: 100vh;
 }
-
 .sidebar {
+    position: fixed;
+    top: 10px; /* 위쪽 간격 */
+    left: -230px; /* 화면 밖으로 숨김 */
     width: 250px;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: calc(100% - 20px); /* 위아래 간격 확보 */
+    background-color: #e6e6e6;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* 둥근 모서리 */
+    transition: transform 0.3s ease, left 0.3s ease; /* 애니메이션 */
 }
 
-    .sidebar h2 {
-        margin-top: 0;
-        font-size: 30px;
-        text-align: center;
-    }
+/* 마우스 호버 시 나타남 */
+.sidebar:hover {
+    left: 0px; /* 화면 안쪽으로 살짝 띄움 */
+}
 
-    .sidebar ul {
-        list-style: none;
-        font-size: 18px;
-        padding: 0;
-    }
+/* 마우스 올릴 때 본문과 거리 확보 */
+.sidebar:hover ~ .content {
+    margin-left: 300px; /* 사이드바 넓이 + 간격 (40px 추가) */
+}
 
-    .sidebar li {
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 4px;
-        margin-bottom: 10px;
-        text-align: center;
-        background-color: #444;
-        color: white;
-    }
+.sidebar h2 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+}
 
-        .sidebar li.active,
-        .sidebar li:hover {
-            background-color: #007bff;
-        }
+.sidebar ul {
+    list-style: none;
+    font-size: 18px;
+    padding: 0;
+}
 
+.sidebar li {
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+    background-color: #007bff;
+}
+
+/* 본문 컨텐츠 스타일 */
 .content {
     flex: 1;
-    min-width: 1200px;
+    min-width: 1600px;
+    margin-left: 50px; /* 기본 좌측 간격 */
+    margin-top: 10px; /* 상단 여백 */
+    margin-right: 10px; /* 우측 여백 */
+    margin-bottom: 10px; /* 하단 여백 */
     background: white;
+    border-radius: 10px; /* 둥근 모서리 */
+    box-shadow: 3px 3px 10px rgba(129, 91, 245, 0.1); /* 부드러운 그림자 */
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    transition: margin-left 0.3s ease;
 }
 
+/* 헤더 스타일 */
 .header {
     background-color: #007bff;
     color: white;
     padding: 20px;
     text-align: center;
+    border-radius: 10px 10px 0 0; /* 위쪽 모서리만 둥글게 */
 }
 
-    .header h1 {
-        font-size: 50px;
-        font-weight: bold;
-        color: white;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-        margin: 0;
-    }
+.header h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
 
 .search-section {
     padding: 30px;

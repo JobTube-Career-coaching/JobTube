@@ -1,0 +1,51 @@
+.pdf-section {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.pdf-upload-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #0056b3, #2d89ef);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 10px rgba(0, 86, 179, 0.3);
+}
+
+    .pdf-upload-label:hover {
+        background: linear-gradient(135deg, #00408a, #1b6edc);
+        box-shadow: 0 4px 12px rgba(0, 86, 179, 0.4);
+    }
+
+.pdf-summary {
+    margin-top: 20px;
+    background-color: #e6f1fc;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+    text-align: left;
+}
+
+    .pdf-summary h3 {
+        margin-top: 0;
+        font-size: 22px;
+        font-weight: bold;
+        color: #003366;
+        text-shadow: 1px 1px 2px rgba(0, 86, 179, 0.2);
+    }
+
+    .pdf-summary p {
+        margin: 12px 0 0;
+        font-size: 16px;
+        color: #333;
+        line-height: 1.8;
+    }

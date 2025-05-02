@@ -1,0 +1,186 @@
+.favorites-section {
+    padding: 20px;
+}
+
+/* 필터 섹션 */
+.filter-section {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.2);
+    margin-bottom: 20px;
+}
+
+    .filter-section h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+
+/* 필터 컨트롤 */
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+    .filter-controls > div {
+        flex: 1 1 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-controls label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .filter-controls input,
+    .filter-controls select {
+        padding: 12px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: inset 0 1px 3px rgba(0, 86, 179, 0.1);
+        transition: border-color 0.3s ease;
+    }
+
+        .filter-controls input:focus,
+        .filter-controls select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+/* 필터 버튼 */
+.filter-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+    .filter-buttons button {
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        background: linear-gradient(135deg, #0056b3, #2d89ef);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        box-shadow: 0 3px 10px rgba(0, 86, 179, 0.3);
+    }
+
+        .filter-buttons button:hover {
+            background: linear-gradient(135deg, #00408a, #1b6edc);
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.4);
+        }
+
+/* 즐겨찾기 리스트 */
+.favorites-list {
+    list-style: none;
+    padding: 0;
+}
+
+.favorites-item {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #f0f7ff;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+}
+
+    .favorites-item h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #003366;
+    }
+
+    .favorites-item p {
+        margin: 0;
+        font-size: 14px;
+        color: #444;
+    }
+
+/* 테이블 스타일 */
+.favorites-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+}
+
+    .favorites-table th,
+    .favorites-table td {
+        padding: 16px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .favorites-table th {
+        background: linear-gradient(135deg, #2a75c9, #5a9dee); /* 기존보다 한 톤 연한 블루 */
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #1d5ea8; /* 기존보다 부드러운 테두리 */
+    }
+
+
+    .favorites-table tbody tr {
+        transition: background 0.3s ease;
+        border-bottom: 1px solid #d0d7e2; /* 연한 회색 밑줄 추가 */
+    }
+
+        .favorites-table tbody tr:nth-child(odd),
+        .favorites-table tbody tr:nth-child(even) {
+            background-color: transparent; /* 기존 배경색 제거 */
+        }
+
+        .favorites-table tbody tr:hover {
+            background-color: #cce2ff;
+            transition: all 0.3s ease;
+        }
+
+
+
+
+/* 페이지네이션 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+    .pagination button {
+        padding: 8px 14px;
+        font-size: 14px;
+        font-weight: bold;
+        background: linear-gradient(135deg, #0056b3, #2d89ef);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        user-select: none;
+    }
+
+        .pagination button:hover {
+            background: linear-gradient(135deg, #00408a, #1b6edc);
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.4);
+        }
+
+        .pagination button[disabled] {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }

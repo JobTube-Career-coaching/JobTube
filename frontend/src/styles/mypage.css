@@ -1,0 +1,191 @@
+.mypage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  /* 환영 섹션 */
+  .welcome-section {
+    background: linear-gradient(to right, #f0f7ff, #f0f0ff);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .welcome-content {
+    padding: 24px;
+  }
+  
+  .welcome-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .user-icon {
+    font-size: 2.5rem;
+    color: #4a90e2;
+  }
+  
+  .welcome-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .welcome-header p {
+    color: #666;
+    margin: 4px 0 0 0;
+  }
+  
+  .welcome-description {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* 그리드 레이아웃 */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* 카드 스타일 */
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .card-header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  /* 리스트 스타일 */
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+  
+  .list-item:hover {
+    background: #f0f0f0;
+  }
+  
+  .category-tag, .date-tag {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* 목표 스타일 */
+  .goals-container {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+  }
+  
+  .goals-container h4 {
+    font-weight: 500;
+    color: #333;
+    margin: 0 0 12px 0;
+  }
+  
+  .goals-list {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+    color: #555;
+  }
+  
+  .goals-list li {
+    margin-bottom: 8px;
+  }
+  
+  /* 알림 스타일 */
+  .notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .notification {
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+  }
+  
+  .notification.new {
+    background: #f0f7ff;
+  }
+  
+  .notification p {
+    margin: 0;
+    color: #333;
+  }
+  
+  .notification-time {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  /* 설정 버튼 */
+  .settings-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .settings-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    color: #666;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .settings-button:hover {
+    color: #333;
+  }

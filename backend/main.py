@@ -33,9 +33,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 서비스 초기화
-YOUTUBE_API_KEY = "AIzaSyBqmqqFslgj9ktmWrQmmkuCgk4-p469u84"
-OPENAI_API_KEY = "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"
+# 서비스 초기화:API키 설정 필요.
+YOUTUBE_API_KEY = "secret"
 
 # 서비스 초기화
 try:
